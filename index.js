@@ -226,12 +226,15 @@ function addTask(event) {
 function toggleSidebar(show) {}
 
 function toggleTheme() {
+  const themeLogo = document.getElementById("logo");
   if (elements.themeSwitch.checked) {
     document.body.classList.add("light-theme");
     document.body.classList.remove("dark-theme");
+    themeLogo.src = "./assets/logo-light.svg";
   } else {
     document.body.classList.remove("light-theme");
     document.body.classList.add("dark-theme");
+    themeLogo.src = "./assets/logo-dark.svg";
   }
 }
 
