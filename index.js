@@ -75,9 +75,8 @@ function displayBoards(boards) {
       activeBoard = board; //assigns active board
       localStorage.setItem("activeBoard", JSON.stringify(activeBoard));
       styleActiveBoard(activeBoard);
-
-      boardsContainer.appendChild(boardElement);
     });
+    boardsContainer.appendChild(boardElement);
   });
 }
 
