@@ -43,7 +43,6 @@ const elements = {
   saveChangesBtn: document.getElementById("save-task-changes-btn"),
   deleteTaskBtn: document.getElementById("delete-task-btn"),
 };
-
 let activeBoard = "";
 
 // Extracts unique board names from tasks
