@@ -225,7 +225,15 @@ function addTask(event) {
 
 function toggleSidebar(show) {}
 
-function toggleTheme() {}
+function toggleTheme() {
+  if (elements.themeSwitch.checked) {
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+  } else {
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+  }
+}
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
