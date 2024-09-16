@@ -223,8 +223,10 @@ function addTask(event) {
   }
 }
 
+//Toggle sidebar
 function toggleSidebar(show) {}
 
+// Theme switch
 function toggleTheme() {
   const themeLogo = document.getElementById("logo");
   if (elements.themeSwitch.checked) {
