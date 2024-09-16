@@ -38,7 +38,7 @@ const elements = {
   addTaskForm: document.getElementById("new-task-modal-window"),
   editTaskForm: document.getElementById("edit-task-form"),
   cancelEditBtn: document.getElementById("cancel-edit-btn"),
-  // cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
+  cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
   saveChangesBtn: document.getElementById("save-task-changes-btn"),
   deleteTaskBtn: document.getElementById("delete-task-btn"),
 };
