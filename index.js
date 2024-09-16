@@ -26,6 +26,7 @@ initializeData();
 
 // TASK: Get elements from the DOM
 const elements = {
+  boardsContainer: document.getElementById("boards-nav-links-div"),
   filterDiv: document.getElementById("filterDiv"),
   modalWindow: document.querySelector(".modal-window"),
   editTaskModal: document.querySelector(".edit-task-modal-window"),
@@ -63,8 +64,7 @@ function fetchAndDisplayBoardsAndTasks() {
 // Creates different boards in the DOM
 // TASK: Fix Bugs (Fixed)
 function displayBoards(boards) {
-  const boardsContainer = document.getElementById("boards-nav-links-div");
-  boardsContainer.innerHTML = ""; // Clears the container
+  elements.boardsContainer.innerHTML = ""; // Clears the container
   boards.forEach((board) => {
     const boardElement = document.createElement("button");
     boardElement.textContent = board;
@@ -76,7 +76,7 @@ function displayBoards(boards) {
       localStorage.setItem("activeBoard", JSON.stringify(activeBoard));
       styleActiveBoard(activeBoard);
     });
-    boardsContainer.appendChild(boardElement);
+    elements.boardsContainer.appendChild(boardElement);
   });
 }
 
@@ -161,14 +161,12 @@ function addTaskToUI(task) {
 
 function setupEventListeners() {
   // Cancel editing task event listener
-  const cancelEditBtn = document.getElementById("cancel-edit-btn");
-  cancelEditBtn.addEventListener("click", () =>
+  elements.cancelEditBtn.addEventListener("click", () =>
     toggleModal(false, elements.editTaskModal)
   );
 
   // Cancel adding new task event listener
-  const cancelAddTaskBtn = document.getElementById("cancel-add-task-btn");
-  cancelAddTaskBtn.addEventListener("click", () => {
+  elements.cancelAddTaskBtn.addEventListener("click", () => {
     toggleModal(false);
     elements.filterDiv.style.display = "none"; // Also hide the filter overlay
   });
