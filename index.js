@@ -24,7 +24,24 @@ function initializeData() {
 }
 
 // TASK: Get elements from the DOM
-const elements = {};
+const elements = {
+  filterDiv: document.getElementById("filterDiv"),
+  modalWindow: document.querySelector(".modal-window"),
+  editTaskModal: document.querySelector(".edit-task-modal-window"),
+  headerBoardName: document.getElementById("header-board-name"),
+  hideSideBarBtn: document.querySelector(".hide-side-bar-div"),
+  showSideBarBtn: document.getElementById("show-side-bar-btn"),
+  themeSwitch: document.getElementById("switch"),
+  createNewTaskBtn: document.getElementById("create-task-btn"),
+  columnDivs: document.querySelectorAll(".column-div"),
+  boardsNavLinksDiv: document.getElementById("boards-nav-links-div"),
+  addTaskForm: document.getElementById("new-task-modal-window"),
+  editTaskForm: document.getElementById("edit-task-form"),
+  cancelEditBtn: document.getElementById("cancel-edit-btn"),
+  // cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
+  saveChangesBtn: document.getElementById("save-task-changes-btn"),
+  deleteTaskBtn: document.getElementById("delete-task-btn"),
+};
 
 let activeBoard = "";
 
