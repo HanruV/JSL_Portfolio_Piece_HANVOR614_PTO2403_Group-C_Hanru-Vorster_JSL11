@@ -103,6 +103,7 @@ function filterAndDisplayTasksByBoard(boardName) {
     filteredTasks
       .filter((task) => task.status === status)
       .forEach((task) => {
+        console.log(task.status);
         const taskElement = document.createElement("div");
         taskElement.classList.add("task-div");
         taskElement.textContent = task.title;
@@ -112,7 +113,6 @@ function filterAndDisplayTasksByBoard(boardName) {
         taskElement.addEventListener("click", () => {
           openEditTaskModal(task);
         });
-
         tasksContainer.appendChild(taskElement);
       });
   });
