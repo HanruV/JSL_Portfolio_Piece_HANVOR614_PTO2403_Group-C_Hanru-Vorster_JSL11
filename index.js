@@ -40,10 +40,14 @@ const elements = {
   createNewTaskBtn: document.getElementById("add-new-task-btn"),
   boardsNavLinksDiv: document.getElementById("boards-nav-links-div"),
   columnDivs: document.querySelectorAll(".column-div"),
-  //New Task elements
+  //New Task form and button elements
   addTaskForm: document.getElementById("new-task-modal-window"),
   editTaskForm: document.getElementById("edit-task-form"),
   cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
+  //New task input fields
+  titleInput: document.getElementById("title-input"),
+  descInput: document.getElementById("desc-input"),
+  modalSelectStatus: document.getElementById("modal-select-status"),
   //Edit task elements
   editTaskTitleInput: document.getElementById("edit-task-title-input"),
   editTaskDescInput: document.getElementById("edit-task-desc-input"),
@@ -219,7 +223,11 @@ function addTask(event) {
   event.preventDefault();
 
   //Assign user input to the task object
-  const task = {};
+  const task = {
+    title: elements.titleInput.value,
+    description: elements.descInput.value,
+    status: elements.modalSelectStatus.value,
+  };
   const newTask = createNewTask(task);
   if (newTask) {
     addTaskToUI(newTask);
@@ -268,6 +276,7 @@ function openEditTaskModal(task) {
   };
   // Delete task using a helper function and close the task modal
   elements.deleteTaskBtn.onclick = function () {
+    //Confirmation popup
     const confirmation = window.confirm(
       "Are you sure you want to delete this taks?"
     );
