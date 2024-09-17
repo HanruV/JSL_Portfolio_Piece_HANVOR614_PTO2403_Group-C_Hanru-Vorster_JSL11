@@ -26,6 +26,7 @@ initializeData();
 
 // TASK: Get elements from the DOM
 const elements = {
+  layout: document.getElementById("layout"),
   boardsContainer: document.getElementById("boards-nav-links-div"),
   filterDiv: document.getElementById("filterDiv"),
   modalWindow: document.querySelector(".modal-window"),
@@ -224,7 +225,11 @@ function addTask(event) {
 }
 
 //Toggle sidebar
-function toggleSidebar(show) {}
+function toggleSidebar(show) {
+  if (show) {
+    elements.sidebar.style.display = "block";
+  }
+}
 
 // Theme switch
 function toggleTheme() {
