@@ -277,13 +277,15 @@ function openEditTaskModal(task) {
 
 function saveTaskChanges(taskId) {
   // Get new user inputs
-
-  // Create an object with the updated task details
-
+  const updatedTask = {
+    title: elements.editTaskTitleInput.value,
+    description: elements.editTaskDescInput.value,
+    status: elements.editTaskSelectStatus.value,
+  };
   // Update task using a hlper functoin
-
+  patchTask(taskId, updatedTask);
   // Close the modal and refresh the UI to reflect the changes
-
+  toggleModal(false, elements.editTaskModal);
   refreshTasksUI();
 }
 
