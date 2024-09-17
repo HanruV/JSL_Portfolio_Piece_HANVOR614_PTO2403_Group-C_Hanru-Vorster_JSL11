@@ -45,6 +45,9 @@ const elements = {
   editTaskForm: document.getElementById("edit-task-form"),
   cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
   //Edit task elements
+  editTaskTitleInput: document.getElementById("edit-task-title-input"),
+  editTaskDescInput: document.getElementById("edit-task-desc-input"),
+  editTaskSelectStatus: document.getElementById("edit-select-status"),
   editTaskModalWindow: document.querySelector(".edit-task-modal-window"),
   cancelEditBtn: document.getElementById("cancel-edit-btn"),
   saveChangesBtn: document.getElementById("save-task-changes-btn"),
