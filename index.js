@@ -26,23 +26,27 @@ initializeData();
 
 // TASK: Get elements from the DOM
 const elements = {
-  boardsContainer: document.getElementById("boards-nav-links-div"),
   filterDiv: document.getElementById("filterDiv"),
+  boardsContainer: document.getElementById("boards-nav-links-div"),
   modalWindow: document.querySelector(".modal-window"),
   editTaskModal: document.querySelector(".edit-task-modal-window"),
   headerBoardName: document.getElementById("header-board-name"),
+  // Sidebar elements
   sidebar: document.getElementById("side-bar-div"),
   hideSideBarBtn: document.querySelector(".hide-side-bar-div"),
   showSideBarBtn: document.getElementById("show-side-bar-btn"),
   themeSwitch: document.getElementById("switch"),
-  columnDivs: document.querySelectorAll(".column-div"),
-  boardsNavLinksDiv: document.getElementById("boards-nav-links-div"),
+  //Header/body elements
   createNewTaskBtn: document.getElementById("add-new-task-btn"),
-  editTaskModalWindow: document.querySelector(".edit-task-modal-window"),
+  boardsNavLinksDiv: document.getElementById("boards-nav-links-div"),
+  columnDivs: document.querySelectorAll(".column-div"),
+  //New Task elements
   addTaskForm: document.getElementById("new-task-modal-window"),
   editTaskForm: document.getElementById("edit-task-form"),
-  cancelEditBtn: document.getElementById("cancel-edit-btn"),
   cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
+  //Edit task elements
+  editTaskModalWindow: document.querySelector(".edit-task-modal-window"),
+  cancelEditBtn: document.getElementById("cancel-edit-btn"),
   saveChangesBtn: document.getElementById("save-task-changes-btn"),
   deleteTaskBtn: document.getElementById("delete-task-btn"),
 };
