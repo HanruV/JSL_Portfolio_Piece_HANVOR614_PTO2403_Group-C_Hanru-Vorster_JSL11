@@ -268,11 +268,17 @@ function openEditTaskModal(task) {
   };
   // Delete task using a helper function and close the task modal
   elements.deleteTaskBtn.onclick = function () {
-    deleteTask(task.id);
-    toggleModal(false, elements.editTaskModal);
-    refreshTasksUI();
+    const confirmation = window.confirm(
+      "Are you sure you want to delete this taks?"
+    );
+    if (confirmation) {
+      deleteTask(task.id);
+      toggleModal(false, elements.editTaskModal);
+      refreshTasksUI();
+    }
   };
-  toggleModal(true, elements.editTaskModal); // Show the edit task modal
+  // Show the edit task modal
+  toggleModal(true, elements.editTaskModal);
 }
 
 function saveTaskChanges(taskId) {
