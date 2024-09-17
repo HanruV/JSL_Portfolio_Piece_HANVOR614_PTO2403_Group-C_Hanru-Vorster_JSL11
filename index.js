@@ -227,6 +227,7 @@ function addTask(event) {
     title: elements.titleInput.value,
     description: elements.descInput.value,
     status: elements.modalSelectStatus.value,
+    board: activeBoard,
   };
   const newTask = createNewTask(task);
   if (newTask) {
