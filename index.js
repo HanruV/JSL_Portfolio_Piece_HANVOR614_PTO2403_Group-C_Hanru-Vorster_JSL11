@@ -37,6 +37,7 @@ const elements = {
   columnDivs: document.querySelectorAll(".column-div"),
   boardsNavLinksDiv: document.getElementById("boards-nav-links-div"),
   createNewTaskBtn: document.getElementById("add-new-task-btn"),
+  editTaskModalWindow: document.querySelector(".edit-task-modal-window"),
   addTaskForm: document.getElementById("new-task-modal-window"),
   editTaskForm: document.getElementById("edit-task-form"),
   cancelEditBtn: document.getElementById("cancel-edit-btn"),
@@ -171,7 +172,7 @@ function setupEventListeners() {
     elements.filterDiv.style.display = "none"; // Also hide the filter overlay
   });
 
-  // Clicking outside the modal to close it
+  // Clicking outside the NewTask modal to close it
   elements.filterDiv.addEventListener("click", () => {
     toggleModal(false);
     elements.filterDiv.style.display = "none"; // Also hide the filter overlay
