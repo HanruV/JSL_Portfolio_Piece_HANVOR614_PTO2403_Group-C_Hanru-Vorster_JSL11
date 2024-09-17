@@ -31,6 +31,7 @@ const elements = {
   modalWindow: document.querySelector(".modal-window"),
   editTaskModal: document.querySelector(".edit-task-modal-window"),
   headerBoardName: document.getElementById("header-board-name"),
+  sidebar: document.getElementById("side-bar-div"),
   hideSideBarBtn: document.querySelector(".hide-side-bar-div"),
   showSideBarBtn: document.getElementById("show-side-bar-btn"),
   themeSwitch: document.getElementById("switch"),
