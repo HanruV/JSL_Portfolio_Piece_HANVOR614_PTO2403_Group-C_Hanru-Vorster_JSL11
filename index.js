@@ -41,10 +41,12 @@ const elements = {
   boardsNavLinksDiv: document.getElementById("boards-nav-links-div"),
   columnDivs: document.querySelectorAll(".column-div"),
   //New Task form and button elements
+  createTaskBtn: document.getElementById("create-task-btn"),
   addTaskForm: document.getElementById("new-task-modal-window"),
   editTaskForm: document.getElementById("edit-task-form"),
   cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
   //New task input fields
+
   titleInput: document.getElementById("title-input"),
   descInput: document.getElementById("desc-input"),
   modalSelectStatus: document.getElementById("modal-select-status"),
