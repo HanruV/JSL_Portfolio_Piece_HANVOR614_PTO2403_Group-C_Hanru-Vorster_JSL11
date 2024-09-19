@@ -46,7 +46,6 @@ const elements = {
   editTaskForm: document.getElementById("edit-task-form"),
   cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
   //New task input fields
-
   titleInput: document.getElementById("title-input"),
   descInput: document.getElementById("desc-input"),
   modalSelectStatus: document.getElementById("select-status"),
@@ -243,7 +242,7 @@ function addTask(event) {
 //Toggle sidebar
 function toggleSidebar(show) {
   if (show) {
-    elements.sidebar.style.display = "block";
+    elements.sidebar.style.display = "flex";
     elements.showSideBarBtn.style.display = "none";
     elements.hideSideBarBtn.style.display = "flex";
   } else {

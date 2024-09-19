@@ -53,6 +53,7 @@ body {
 }
 
 .side-bar {
+  display: flex;
   /*  */
   background-color: var(--primary-color);
   /* border: 5px solid rgb(0, 0, 0); */
