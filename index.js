@@ -65,7 +65,6 @@ let activeBoard = "";
 // TASK: FIX BUGS (Fixed)
 function fetchAndDisplayBoardsAndTasks() {
   const tasks = getTasks();
-  console.log("Tasks fetched for UI refresh:", tasks);
   const boards = [...new Set(tasks.map((task) => task.board).filter(Boolean))];
   displayBoards(boards);
   if (boards.length > 0) {
@@ -149,7 +148,6 @@ function styleActiveBoard(boardName) {
 }
 
 function addTaskToUI(task) {
-  console.log("Adding task to UI:", task);
   const column = document.querySelector(
     `.column-div[data-status="${task.status}"]`
   );
@@ -225,7 +223,6 @@ function toggleModal(show, modal = elements.modalWindow) {
 
 function addTask(event) {
   event.preventDefault();
-  console.log("Active board when adding task:", activeBoard);
   //Assign user input to the task object
   const task = {
     title: elements.titleInput.value,
