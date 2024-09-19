@@ -16,6 +16,7 @@ export const createNewTask = (task) => {
   const newTask = { ...task, id: new Date().getTime() }; // Create new task with unique ID
   tasks.push(newTask); // Add new task to the array
   saveTasks(tasks); // Save updated tasks array to local storage
+  console.log("Tasks after saving:", JSON.parse(localStorage.getItem("tasks")));
   return newTask; // Return the newly created task
 };
 
