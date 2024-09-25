@@ -13,6 +13,11 @@ import { initialData } from "./initialData.js";
  * FIX BUGS!!!
  * **********************************************************************************************************************************************/
 
+/**
+ *
+ * Initializing the data
+ *
+ */
 // Function checks if local storage already has data, if not it loads initialData to localStorage
 function initializeData() {
   if (!localStorage.getItem("tasks")) {
@@ -329,11 +334,7 @@ function toggleTheme() {
 }
 
 /*************************************************************************************************************************************************/
-/**
- *
- * Initializing the data
- *
- */
+
 document.addEventListener("DOMContentLoaded", function () {
   init(); // init is called after the DOM is fully loaded
 });
