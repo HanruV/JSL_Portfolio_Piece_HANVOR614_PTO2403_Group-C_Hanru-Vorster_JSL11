@@ -42,9 +42,9 @@ export const putTask = (id, updatedTask) => {
 };
 
 export const deleteTask = (id) => {
-  const tasks = getTasks();
+  const tasks = getTasks(); // retrieve current tasks in local storage
   const updatedTasks = tasks.filter((task) => task.id !== id);
-  saveTasks(updatedTasks);
+  saveTasks(updatedTasks); // update local storage with a new array of tasks
   // Previously: location.reload(); Now: We'll refresh the UI instead.
   return updatedTasks; // Optionally return the updated tasks list for further processing
 };
