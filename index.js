@@ -24,7 +24,11 @@ function initializeData() {
 }
 initializeData();
 
-// TASK: Get elements from the DOM
+/**
+ *
+ * Dom Elemeents
+ *
+ */
 const elements = {
   filterDiv: document.getElementById("filterDiv"),
   boardsContainer: document.getElementById("boards-nav-links-div"),
@@ -58,6 +62,7 @@ const elements = {
   saveChangesBtn: document.getElementById("save-task-changes-btn"),
   deleteTaskBtn: document.getElementById("delete-task-btn"),
 };
+
 let activeBoard = "";
 
 // Extracts unique board names from tasks
@@ -238,7 +243,11 @@ function addTask(event) {
     refreshTasksUI();
   }
 }
-
+/**
+ *
+ * Sidebar and Theme
+ *
+ */
 //Toggle sidebar
 function toggleSidebar(show) {
   if (show) {
@@ -266,6 +275,11 @@ function toggleTheme() {
   }
 }
 
+/**
+ *
+ * View/edit/delete tasks
+ *
+ */
 function openEditTaskModal(task) {
   // Set task details in modal inputs
   elements.editTaskTitleInput.value = task.title;
@@ -306,7 +320,11 @@ function saveTaskChanges(taskId) {
 }
 
 /*************************************************************************************************************************************************/
-
+/**
+ *
+ * Initializing the data
+ *
+ */
 document.addEventListener("DOMContentLoaded", function () {
   init(); // init is called after the DOM is fully loaded
 });
