@@ -160,7 +160,7 @@ function filterAndDisplayTasksByBoard(boardName) {
 
 /**
  *
- * View/edit/delete tasks
+ * View/edit/cancel/delete tasks
  *
  */
 function openEditTaskModal(task) {
